@@ -1,0 +1,2 @@
+class PermutatorsController < ApplicationController
+end
