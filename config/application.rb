@@ -15,7 +15,7 @@ require 'sprockets/railtie'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Emailperm
+module RailsTemplate
   class Application < Rails::Application
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
