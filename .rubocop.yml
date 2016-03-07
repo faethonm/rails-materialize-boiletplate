@@ -1,0 +1,18 @@
+inherit_from: .rubocop_todo.yml
+Encoding:
+  Enabled: false
+
+SingleLineBlockParams:
+  Methods:
+    - reduce:
+        - a
+        - e
+    - inject:
+        - a
+        - e
+    - each_with_object:
+        - e
+        - a
+AllCops:
+  Excludes:
+    - db/schema.rb
