@@ -2,8 +2,25 @@
   <h1>Template App</h1>
 
   <h2>
+  <% if user_signed_in? %>
+    Hi <%= current_user.email %>
+    You are now logged in<br/>
+    <section>
+    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-lg btn-primary" %>
+    </section>
+  <% else %>
     Rails template project
+    Gems already setup
+    <ul>
+      <li>Devise </li>
+      <li>Bootstrap </li>
+      <li>Rspec </li>
+      <li>Guard </li>
+      <li>FFaker </li>
+      <li>FactoryGirl </li>
+      <li>Shoulda matchers </li>
+    </ul>
+    <%= link_to "Log in", new_user_session_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
   </h2>
-
-  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
 </div>
