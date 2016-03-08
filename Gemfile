@@ -23,14 +23,16 @@ group :development, :test do
   gem 'byebug'
   gem "factory_girl_rails"
   gem 'ffaker'
-
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'launchy'
+  gem "rspec-rails"
 end
 
 group :test do
   gem 'guard-rspec'
   gem 'guard-livereload'
-  gem "rspec-rails"
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'database_cleaner'
 end
 
 group :production do

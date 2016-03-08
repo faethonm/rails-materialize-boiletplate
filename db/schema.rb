@@ -13,16 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160307060758) do
 
-  create_table "permutators", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "middle_name"
-    t.string   "company_name"
-    t.string   "company_domain"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
