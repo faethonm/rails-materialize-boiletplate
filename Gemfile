@@ -33,6 +33,7 @@ group :test do
   gem 'guard-livereload'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'database_cleaner'
+  gem 'simplecov', :require => false
 end
 
 group :production do

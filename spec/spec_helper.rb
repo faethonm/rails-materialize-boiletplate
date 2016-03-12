@@ -5,11 +5,27 @@ require 'rspec/rails'
 require 'devise'
 require 'capybara/rspec'
 
+require 'simplecov'
+SimpleCov.start do
+  add_filter '/config/'
+  add_filter '/spec/'
+  add_filter '/test/'
+  add_group 'Models', 'app/models'
+  add_group 'Controllers', 'app/controllers'
+  add_group 'Reports', 'app/uploaders'
+  add_group 'Serializers', 'app/serializers'
+  add_group 'Helpers', 'app/helpers'
+  add_group 'Mailers', 'app/mailers'
+  add_group 'Lib', 'lib/'
+end
+
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
+
+
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
