@@ -11,14 +11,15 @@
   <% else %>
     Rails template project
     Gems already setup
-    <ul>
-      <li>Devise </li>
-      <li>Bootstrap </li>
-      <li>Rspec </li>
-      <li>Guard </li>
-      <li>FFaker </li>
-      <li>FactoryGirl </li>
-      <li>Shoulda matchers </li>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-success">Devise</li>
+      <li class="list-group-item list-group-item-info">Bootstrap</li>
+      <li class="list-group-item list-group-item-warning">Rspec</li>
+      <li class="list-group-item list-group-item-danger">Guard</li>
+      <li class="list-group-item list-group-item-success">Devise</li>
+      <li class="list-group-item list-group-item-info">FFaker </li>
+      <li class="list-group-item list-group-item-warning">FactoryGirl </li>
+      <li class="list-group-item list-group-item-danger">Shoulda matchers </li>
     </ul>
     <%= link_to "Log in", new_user_session_path, class: "btn btn-lg btn-primary" %>
   <% end %>
