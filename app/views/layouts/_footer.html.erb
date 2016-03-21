@@ -1,11 +1,19 @@
-<footer class="footer">
-  <small>
-    Published by <a href="https://github.com/faethonm">Faethon Milikouris</a>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to 'About', 'https://github.com/faethonm' %></li>
-      <li><%= link_to 'Contact', contact_path %></li>
-    </ul>
-  </nav>
-</footer>
+<footer class="page-footer blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Motivation</h5>
+          <p class="grey-text text-lighten-4">This bootstrap project was created to help developers start developing a Minimum Viable Product in not time.</p>
+
+        </div>
+        <div class="col l3 s12">
+          <h5><%= link_to 'Contact', contact_path ,class: "white-text"%></h5>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Published by <a class="orange-text text-lighten-3" href="https://github.com/faethonm">Faethon Milikouris</a>
+      </div>
+    </div>
+  </footer>

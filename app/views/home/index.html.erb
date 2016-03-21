@@ -1,27 +1,74 @@
-<div class="center jumbotron">
-  <h1>Template App</h1>
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <br><br>
+    <h1 class="header center  pink-text">Template Application</h1>
+    <div class="row center">
+      <h5 class="header col s12 light">Avoid the hassle of setting up your project and get started hacking right away</h5>
+    </div>
+    <div class="row center">
+      <% if user_signed_in? %>
+        Hi <%= current_user.email %>
+        You are now logged in<br/>
+        <section>
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn-large waves-effect waves-light pink" %>
+        </section>
+      <% else %>
+        <%= link_to "Log in", new_user_session_path, class: "btn-large waves-effect waves-light pink" %>
+      <% end %>
+    </div>
+    <br><br>
 
-  <h2>
-  <% if user_signed_in? %>
-    Hi <%= current_user.email %>
-    You are now logged in<br/>
-    <section>
-    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-lg btn-primary" %>
-    </section>
-  <% else %>
-    Rails template project
-    Gems already setup
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-success">Devise</li>
-      <li class="list-group-item list-group-item-info">Bootstrap</li>
-      <li class="list-group-item list-group-item-warning">Rspec</li>
-      <li class="list-group-item list-group-item-danger">Guard</li>
-      <li class="list-group-item list-group-item-success">Devise</li>
-      <li class="list-group-item list-group-item-info">FFaker </li>
-      <li class="list-group-item list-group-item-warning">FactoryGirl </li>
-      <li class="list-group-item list-group-item-danger">Shoulda matchers </li>
-    </ul>
-    <%= link_to "Log in", new_user_session_path, class: "btn btn-lg btn-primary" %>
-  <% end %>
-  </h2>
+  </div>
+</div>
+
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+          <h5 class="center">Testing</h5>
+
+          <ul class="center">
+            <li>Rspec </li>
+            <li>Guard </li>
+            <li>FFaker </li>
+            <li>FactoryGirl </li>
+            <li>Shoulda matchers </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+          <h5 class="center">Authentication</h5>
+
+          <ul class="center">
+           <li>Devise </li>
+           </ul>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+          <h5 class="center">Focus on your implementation</h5>
+
+          <ul class="center">
+            <li> 100% code coverage</li>
+            <li> 100% test passed</li>
+            <li> Fully configurable</li>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br><br>
+
+  <div class="section">
+
+  </div>
 </div>
