@@ -8,4 +8,6 @@ Gems already setup
   FFaker
   FactoryGirl
   Shoulda
+  Travis
+  SimpleCov
 
