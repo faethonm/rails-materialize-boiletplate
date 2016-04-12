@@ -11,7 +11,7 @@ Lint/UnusedMethodArgument:
   Enabled: false
 
 # Offense count: 2
-Style/BlockNesting:
+Metrics/BlockNesting:
   Max: 4
 
 # Offense count: 2
@@ -22,8 +22,11 @@ Style/ClassCheck:
 
 # Offense count: 28
 # Configuration parameters: CountComments.
-Style/ClassLength:
+Metrics/ClassLength:
   Max: 1000
+
+Style/Lambda:
+  Enabled: false
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -31,7 +34,7 @@ Style/CommentIndentation:
   Enabled: false
 
 # Offense count: 44
-Style/CyclomaticComplexity:
+Metrics/CyclomaticComplexity:
   Max: 175
 
 # Offense count: 207
@@ -75,7 +78,7 @@ Style/LineLength:
 
 # Offense count: 200
 # Configuration parameters: CountComments.
-Style/MethodLength:
+Metrics/MethodLength:
   Max: 495
 
 # Offense count: 24
@@ -98,7 +101,7 @@ Style/Next:
 
 # Offense count: 3
 # Configuration parameters: CountKeywordArgs.
-Style/ParameterLists:
+Metrics/ParameterLists:
   Max: 9
 
 # Offense count: 5
@@ -114,4 +117,7 @@ Style/SpaceInsideBrackets:
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/UnneededPercentQ:
+  Enabled: false
+
+Metrics/AbcSize:
   Enabled: false

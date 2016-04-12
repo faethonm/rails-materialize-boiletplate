@@ -12,20 +12,29 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'figaro'
+gem 'rails_12factor'
+gem 'annotate'
+gem 'administrate', '~> 0.1.2'
+gem 'better_errors'
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'sqlite3'
+  gem 'awesome_print'
+  gem 'spring-commands-rspec'
 end
 
 group :development, :test do
   gem 'byebug'
-  gem "factory_girl_rails"
+  gem 'factory_girl_rails'
   gem 'ffaker'
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'capybara', git: 'git://github.com/jnicklas/capybara.git'
   gem 'launchy'
-  gem "rspec-rails"
+  gem 'rspec-rails'
+  gem 'rubocop'
+  gem 'rspec_junit_formatter'
 end
 
 group :test do
@@ -33,7 +42,8 @@ group :test do
   gem 'guard-livereload'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'database_cleaner'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
+  gem 'simplecov-csv', require: false
 end
 
 group :production do

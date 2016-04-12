@@ -18,3 +18,8 @@
 
 #ignore coverage
 coverage
+.byebug_history
+shippable
+
+# Ignore application configuration
+/config/application.yml

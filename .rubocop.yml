@@ -15,4 +15,8 @@ SingleLineBlockParams:
         - a
 AllCops:
   Excludes:
-    - db/schema.rb
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - Gemfile
+    - Rakefile
