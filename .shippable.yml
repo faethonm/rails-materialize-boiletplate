@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.1.1
+  - 2.3.1
 env:
   - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
 before_install:
@@ -9,6 +9,7 @@ before_install:
 before_script:
   # ensure the test output and coverage dirs are created
   - mkdir -p shippable/testresults
+  - bin/rails db:environment:set RAILS_ENV=test
 script:
   - rspec -f RspecJunitFormatter -o shippable/testresults/results.xml
   - rubocop
