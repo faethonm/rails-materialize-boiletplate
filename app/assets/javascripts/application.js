@@ -15,3 +15,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+var ready = function() {
+    // do stuff here.
+  $('.button-collapse').sideNav();
+};
+
+$(document).on('turbolinks:load', ready);

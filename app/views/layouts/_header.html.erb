@@ -1,29 +1,29 @@
 <header >
   <nav class="blue darken-4" role="navigation">
     <div class="nav-wrapper container">
+      <a href="#" data-activates="nav-mobile" class=" button-collapse"><i class="material-icons">menu</i></a>
       <%= link_to "Starter Template", root_url, id: "logo", class: "brand-logo", id: "logo-container"  %>
       <ul class="right hide-on-med-and-down">
          <li><%= link_to "Home",   root_url %></li>
 
          <% if user_signed_in? %>
-         <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete%></li>
-         <li><%= link_to "Contact Us",   contact_url %></li>
-         <% else %>
-          <li><%= link_to "Log in", new_user_session_path %></li>
+           <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete%></li>
+           <li><%= link_to "Contact Us",   contact_url %></li>
+           <% else %>
+            <li><%= link_to "Log in", new_user_session_path %></li>
           <% end %>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-         <li><%= link_to "Home",   root_url %></li>
+        <li><%= link_to "Home",   root_url %></li>
 
-         <% if user_signed_in? %>
-         <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete%></li>
-         <li><%= link_to "Contact Us",   contact_url %></li>
-         <% else %>
+        <% if user_signed_in? %>
+          <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete%></li>
+          <li><%= link_to "Contact Us",   contact_url %></li>
+        <% else %>
           <li><%= link_to "Log in", new_user_session_path %></li>
-          <% end %>
+        <% end %>
       </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 </header>
